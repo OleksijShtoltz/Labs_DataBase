@@ -1,0 +1,52 @@
+CREATE SCHEMA s2321adamenko
+
+/*
+	Creating database tables
+*/
+
+CREATE TABLE s2321adamenko.Customer(
+Customer_id serial PRIMARY KEY,
+Name character varying(50) NOT NULL,
+Address character varying(50) NOT NULL
+)
+
+CREATE TABLE s2321adamenko.Orders(
+Order_id integer PRIMARY KEY,
+Customer_id integer references s2321adamenko.Customer(customer_id),
+Other_details text
+)
+
+CREATE TABLE s2321adamenko.Types_of_component(
+Type_id integer PRIMARY KEY, 
+Type character varying(50) NOT NULL
+)
+
+
+CREATE TABLE s2321adamenko.Manufacturer(
+Manufacturer_id PRIMARY KEY, 
+Name character varying(50) NOT NULL
+)
+
+
+CREATE TABLE s2321adamenko.Product(
+Product_id integer PRIMARY KEY,
+Type_of_component integer references s2321adamenko.Types_of_component(Type_id),
+Price numeric(10, 2) NOT NULL CHECK (Price >= 0),
+Quantity integer NOT NULL CHECK (Quantity >= 0),
+Manufacturer integer references s2321adamenko.Manufacturers(Manufacturer_id),
+Description text
+)
+
+
+CREATE TABLE s2321adamenko.Product_list(
+List_id integer PRIMARY KEY,
+Product_id integer references s2321adamenko.Product(Product_id),
+Order_id integer references s2321adamenko.Orders(Order_id)
+)
+
+
+
+INSERT INTO s2321adamenko.Customer(Name, Address)
+VALUES('Oleksij', 'Kamerona d20 kv1')
+
+
