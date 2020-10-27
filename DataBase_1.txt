@@ -44,9 +44,56 @@ Product_id integer references s2321adamenko.Product(Product_id),
 Order_id integer references s2321adamenko.Orders(Order_id)
 )
 
+/*
+	adding data into Table 'Types_of_component'
+*/
+
+INSERT INTO s2321adamenko.Types_of_component(Type_id, Type)
+VALUES(1, 'Motherboard')
+
+INSERT INTO s2321adamenko.Types_of_component(Type_id, Type)
+VALUES(2, 'Graphics Card')
+
+INSERT INTO s2321adamenko.Types_of_component(Type_id, Type)
+VALUES(3, 'RAM')
+
+INSERT INTO s2321adamenko.Types_of_component(Type_id, Type)
+VALUES(4, 'CPU')
+
+INSERT INTO s2321adamenko.Types_of_component(Type_id, Type)
+VALUES(5, 'Power Unit')
 
 
-INSERT INTO s2321adamenko.Customer(Name, Address)
-VALUES('Oleksij', 'Kamerona d20 kv1')
+/*
+	adding data into Table 'Manufacturers'
+*/
+
+INSERT INTO s2321adamenko.Manufacturers(Manufacturer_id, Name)
+VALUES(1, 'Asus')
+
+INSERT INTO s2321adamenko.Manufacturers(Manufacturer_id, Name)
+VALUES(2, 'Gigabyte')
+
+INSERT INTO s2321adamenko.Manufacturers(Manufacturer_id, Name)
+VALUES(3, 'Be quiet!')
+
+INSERT INTO s2321adamenko.Manufacturers(Manufacturer_id, Name)
+VALUES(4, 'MSI')
+
+INSERT INTO s2321adamenko.Manufacturers(Manufacturer_id, Name)
+VALUES(5, 'Kingston')
+
+INSERT INTO s2321adamenko.Manufacturers(Manufacturer_id, Name)
+VALUES(6, 'Intel')
+
+INSERT INTO s2321adamenko.Manufacturers(Manufacturer_id, Name)
+VALUES(7, 'AMD')
+
+INSERT INTO s2321adamenko.Manufacturers(Manufacturer_id, Name)
+VALUES(8, 'HyperX')
+
+/*
+	adding data into Table 'Customer'
+*/
 
 
