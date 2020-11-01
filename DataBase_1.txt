@@ -136,3 +136,37 @@ VALUES(4, 5, 6800, 12, 3,
 'SYSTEM POWER 9 700W [BN248]')
 
 
+--adding data into Table 'Orders'
+
+INSERT INTO s2321adamenko.Orders(Order_id, Customer_id)
+VALUES(1, 2)
+
+INSERT INTO s2321adamenko.Orders(Order_id, Customer_id)
+VALUES(2, 4)
+
+INSERT INTO s2321adamenko.Orders(Order_id, Customer_id)
+VALUES(3, 2)
+
+INSERT INTO s2321adamenko.Orders(Order_id, Customer_id)
+VALUES(4, 5)
+
+
+--adding data into Table 'Product_list'
+
+INSERT INTO s2321adamenko.Product_list(List_id, Product_id, Order_id)
+VALUES(1, 1, 1)
+
+INSERT INTO s2321adamenko.Product_list(List_id, Product_id, Order_id)
+VALUES(2, 1, 2)
+
+INSERT INTO s2321adamenko.Product_list(List_id, Product_id, Order_id)
+VALUES(3, 3, 2)
+
+INSERT INTO s2321adamenko.Product_list(List_id, Product_id, Order_id)
+VALUES(4, 4, 3)
+
+INSERT INTO s2321adamenko.Product_list(List_id, Product_id, Order_id)
+VALUES(5, 3, 4)
+
+INSERT INTO s2321adamenko.Product_list(List_id, Product_id, Order_id)
+VALUES(6, 4, 4)
