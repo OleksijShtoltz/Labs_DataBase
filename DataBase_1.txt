@@ -170,3 +170,9 @@ VALUES(5, 3, 4)
 
 INSERT INTO s2321adamenko.Product_list(List_id, Product_id, Order_id)
 VALUES(6, 4, 4)
+
+
+--adding INDEX into table 'Product'
+
+CREATE INDEX model_index 
+ON s2321adamenko.product (Model)
